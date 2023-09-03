@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Hora de Codar 2</title>
+</head>
+<body>
+    <button id="botaoAtividade1">Maior Numero</button>
+    <button id="botaoAtividade2">é positvou, negativo, ou igual?</button>
+    <button id="botaoAtividade3">O maior valor dentre 3 números</button>
+    <button id="botaoAtividade4">A soma dos dois maiores</button>
+    <button id="botaoAtividade5">A Média aritmética</button>
+    <button id="botaoAtividade6">O primeiro O segundo E o maior</button>
+    <button id="botaoAtividade7">soma inferior a 72</button>
+    <button id="botaoAtividade8">Média entre 0 e 10 maior q cinco</button>
+    <button id="botaoAtividade9">voçê tem idade para votar?</button>
+    <button id="botaoAtividade10">Calcular peso baseado na altura </button>
+    <button id="botaoAtividade11">nn entendi</button>
+  
+
+    <div id="resultado"></div>
+
+    <script>
+         function atividade1() {
+             // Escreva um programa em que o usuário informe dois números utilizando o "prompt". Então escreva em tela o maior deles.
+ var P_valor = parseFloat(prompt("Digite o primeiro valor"));  //passar uma string para um numero
+var S_valor = parseFloat(prompt("Digite o segundo valor"));
+
+// Determinar o maior número mds funciona 
+var MaiorNum;
+
+if (P_valor >= S_valor) {
+    MaiorNum = P_valor;  
+} else {
+    MaiorNum = S_valor; 
+}
+
+// Exibir o maior valor
+alert("O maior valor é: " + MaiorNum);
+//fim
+
+            document.getElementById("resultado").textContent = "Executando atividade 1...";
+        }
+
+
+        function atividade2() {
+    //. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero
+
+// Solicita ao usuário para inserir um número
+var numero = parseFloat(prompt("Digite um número:"));
+numero = parseFloat(numero);
+
+// Verificar o número 
+if (numero > 0) {
+    alert("O número informado é positivo.");
+} else if (numero < 0) {
+    alert("O número informado é negativo.");
+} else {
+    alert("O número informado é zero.");
+}
+
+//é isso
+
+
+ document.getElementById("resultado").textContent = "Executando atividade 2...";
+}
+
+
+        function atividade3() {
+         //Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+  alert("informe 3 numeros mas Não informe valores iguais");
+
+var primeiro = parseInt(prompt("insira o primeiro valor"));
+var segundo = parseInt(prompt("insira o segundo valor"));
+var terceiro = parseInt(prompt("insira o terceiro valor"));
+   //ler o valor e guardar e dps informar 
+if (primeiro > segundo && primeiro > terceiro){
+   alert("O número maior é : " + primeiro );
+} else if 
+   (segundo > primeiro && segundo > terceiro){
+       alert("O número maior é : " + segundo);
+   }
+   else if 
+   (terceiro > segundo && terceiro > primeiro){
+       alert("O número maior é : " + terceiro);
+   } else 
+   alert("não insira valores iguais")
+
+
+            document.getElementById("resultado").textContent = "Executando atividade 3...";
+        }
+
+       
+
+        function atividade4() {
+// Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+ 
+alert("informe 3 numeros mas Não informe valores iguais");
+
+var primeiro = parseInt(prompt("insira o primeiro valor"));
+var segundo = parseInt(prompt("insira o segundo valor"));
+var terceiro = parseInt(prompt("insira o terceiro valor"));
+var soma = primeiro + segundo;
+var soma2 = segundo + primeiro;
+var soma3 = terceiro + segundo;
+
+if (primeiro > segundo && primeiro > terceiro){
+    alert("a soma dos dois maiores é : " + soma );
+ } else if 
+    (segundo > primeiro && segundo > terceiro){
+        alert("a soma dos dois maiores é : " + soma2);
+    }
+    else if 
+    (terceiro > segundo && terceiro > primeiro){
+        alert("a soma dos dois maiores é : " + soma3);
+    } else 
+    alert("não insira valores iguais")
+
+ //fim
+
+
+
+
+ document.getElementById("resultado").textContent = "Executando atividade 4...";
+        }
+
+        function atividade5() {
+     // Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+  
+           // armazenar
+var soma = 0;
+
+// 
+for (var i = 1; i <= 6; i++) {   //o i vai guardar o valor
+  var valor = parseFloat(prompt("Digite o " + i + "º valor: "));
+  soma += valor; // Adiciona o valor 
+}
+
+// Calcula 
+var media = soma / 6;
+
+// Exibe os números informados
+alert("Números informados:");
+
+for (var i = 1; i <= 6; i++) {
+  alert("Valor " + i + ": " + parseFloat(prompt("Digite o " + i + "º valor: ")));
+}
+
+alert("Média aritmética: " + media);
+//fim finalmente mds 
+           
+           
+           
+           
+            document.getElementById("resultado").textContent = "Executando atividade 5...";
+        }
+
+ 
+         function atividade6() {
+            //Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último// e o maior de todos eles (considere que todos os números informados serão diferentes)
+        
+        
+            var p_valor = parseFloat(prompt("digite o primeiro valor: "));
+            var s_valor = parseFloat(prompt("digite o segundo valor: "));
+            var t_valor = parseFloat(prompt("digite o terceiro valor: "));
+            var q_valor = parseFloat(prompt("digite o quarto valor: "));
+                //informar primeiro e ultimo valor
+            alert("primeiro valor informado: " + p_valor);
+            alert("o ultimo valor: " + q_valor);
+           
+              //o maior valor entre os quatros
+
+              // com o math.max ele vai me voltar sempre o maior valor 
+var maiorValor = Math.max(p_valor, s_valor, t_valor, q_valor);
+
+// Verifica se cada valor é igual ao maior valor
+var éMaiorValor1 = p_valor === maiorValor;
+var éMaiorValor2 = s_valor === maiorValor;
+var éMaiorValor3 = t_valor === maiorValor;
+var éMaiorValor4 = q_valor === maiorValor;
+
+// Exibe true ou false para cada valor
+alert("O primeiro valor é o maior: " + éMaiorValor1);
+alert("O segundo valor é o maior: " + éMaiorValor2);
+alert("O terceiro valor é o maior: " + éMaiorValor3);
+alert("O quarto valor é o maior: " + éMaiorValor4);
+//Este código primeiro encontra o maior valor entre os quatro fornecidos pelo usuário e, em seguida, verifica se cada um dos valores é igual ao maior valor. Ele imprime true ou false para cada um dos valores com base em sua comparação com o maior valor.
+
+
+
+
+
+
+            
+            
+
+           
+           
+           
+           
+            document.getElementById("resultado").textContent = "Executando atividade 6...";
+       
+        }
+
+        function atividade7() {
+            // Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
+         
+        // armazenar os numeros antes de tudo
+var numeros = [];
+
+// Variável para armazenar a soma dos números menores que 72
+var soma = 0;
+
+// loop 
+for (var i = 0; i < 6; i++) {
+
+  var numero = parseInt(prompt("Informe 6 número: "));
+
+  // metodo push junto com a array
+  numeros.push(numero);
+
+  
+  if (numero < 72) {
+    soma += numero;
+  }
+}
+
+// Exibe a soma dos números menores que 72
+        alert("Soma dos números menores que 72: " + soma);
+
+// Exibe todos os números informados pelo usuário
+        alert("Números informados pelo usuário: " + numeros.join(", "));
+
+
+
+            document.getElementById("resultado").textContent = "Executando atividade 7...";
+        }
+
+        function atividade8() {
+            // Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"      
+          var nota = parseInt(prompt("nota 1"));
+          var nota2 = parseInt(prompt("nota 2"));
+          var nota3 = parseInt(prompt("nota 3"));
+          var nota4 = parseInt(prompt("nota 4"));
+          var media = nota + nota2 + nota3 + nota4;
+          var mediaF = media / 4;
+
+          if(nota > 10 || nota < 0) {
+            alert("apenas notas de 0 a 10. insira novamente as notas");
+            
+          } else if(nota2 > 10 || nota2 < 0){
+            alert("apenas notas de 0 a 10. insira novamente as notas");
+           
+          } else if (nota3 > 10 || nota3 < 0){
+            alert("apenas notas de 0 a 10. insira novamente as notas");
+            
+          }else if (nota4 > 10 || nota4 < 0){
+             alert("apenas notas de 0 a 10. insira novamente as notas");
+            
+          }
+          
+          if (mediaF >= 5 || mediaF < 10 ){
+            alert("voçê passou no teste");
+          }else{
+            alert("tente novamente!!");
+          
+
+          }
+
+
+
+
+
+
+
+          document.getElementById("resultado").textContent = "Executando atividade 8...";
+      }
+
+
+      function atividade9() {
+        // Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+         
+var anoNascimento = parseInt(prompt("Informe o ano de nascimento:"));
+
+// metodo de data isso tive q pegar com chatgpt pq nn conhecia
+var agora = new Date();
+var anoAtual = agora.getUTCFullYear();
+
+// Calcula a idade da pessoa
+var idade = anoAtual - anoNascimento;
+
+// Verifica se a pessoa pode votar (idade maior ou igual a 16)
+if (idade >= 16) {
+  alert("Você pode votar este ano!");
+} else {
+  alert("Você ainda não pode votar este ano.");
+}
+
+
+
+          document.getElementById("resultado").textContent = "Executando atividade 9..";
+      }
+
+      function atividade10() {
+          //Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:         
+        var sexo = parseFloat(prompt("qual é seu sexo? BIOLOGICO, 1 para FEMININO 2 para MASCULINO "));
+        var altura = parseFloat(prompt("digite sua altura"));
+
+        var soma_h = 72.7 * altura - 58;
+        var soma_m = 62.1 * altura -44.7;
+
+        if (sexo == 1){
+          alert("seu peso ideal é: " + soma_h);
+        }
+        else if(sexo==2){
+          alert("seu peso ideal é: " + soma_m);
+        }
+
+          document.getElementById("resultado").textContent = "Executando atividade 10...";
+      }
+
+
+      function atividade11() {
+      //Uma micro calculadoraEscreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+      //O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. 
+      //Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações
+
+      alert("Não consegui resolver");
+      
+
+
+          document.getElementById("resultado").textContent = "Executando atividade 11...";
+      }
+
+
+
+
+
+
+
+        document.getElementById("botaoAtividade1").addEventListener("click", atividade1);
+        document.getElementById("botaoAtividade2").addEventListener("click", atividade2);
+        document.getElementById("botaoAtividade3").addEventListener("click", atividade3);
+        document.getElementById("botaoAtividade4").addEventListener("click", atividade4);
+        document.getElementById("botaoAtividade5").addEventListener("click", atividade5);
+        document.getElementById("botaoAtividade6").addEventListener("click", atividade6);
+        document.getElementById("botaoAtividade7").addEventListener("click", atividade7);
+        document.getElementById("botaoAtividade8").addEventListener("click", atividade8);
+        document.getElementById("botaoAtividade9").addEventListener("click", atividade9);
+        document.getElementById("botaoAtividade10").addEventListener("click", atividade10);
+        document.getElementById("botaoAtividade11").addEventListener("click", atividade11);
+ 
+    </script>
+</body>
+</html>
